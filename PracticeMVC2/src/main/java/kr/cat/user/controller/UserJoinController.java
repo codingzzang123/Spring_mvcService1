@@ -6,6 +6,8 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.cat.exception.AlreadyExistingMemberException;
 import kr.cat.service.MemberService;
@@ -50,5 +52,12 @@ public class UserJoinController {
 		model.addAttribute("ls",ls);
 		
 		return "user/memberView";
+	}
+	
+	@RequestMapping(value = "/user/idCheck", method = RequestMethod.GET)
+	@ResponseBody
+	public int idCheck(@RequestParam("userId") String user_id) {
+		return 0;
+		//return reg_service.userIdCheck(user_id);
 	}
 }

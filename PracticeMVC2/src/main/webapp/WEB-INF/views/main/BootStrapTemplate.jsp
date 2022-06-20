@@ -43,8 +43,8 @@
 	        	<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 	        		<c:choose>
 	        			<c:when test="${empty authInfo }">
-		        			<li><a class="dropdown-item" href="user/login">Login</a></li>
-		           			<li><a class="dropdown-item" href="user/join">Sign Up</a></li>
+		        			<li><a class="dropdown-item" href="${pageContext.request.contextPath }/user/login">Login</a></li>
+		           			<li><a class="dropdown-item" href="${pageContext.request.contextPath }/user/join">Sign Up</a></li>
 	        			</c:when>
 	        			<c:when test="${!empty authInfo }">
 	        				<li><a class="dropdown-item" href="">Info</a></li>

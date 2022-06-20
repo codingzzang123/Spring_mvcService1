@@ -63,6 +63,7 @@
 		  border-top-left-radius: 0;
 		  border-top-right-radius: 0;
 		}
+		
     </style>
 
     <title><spring:message code="login.title"/></title>
@@ -78,13 +79,13 @@
 		<br><br>
 	    <div class="form-floating">
 	      <form:input path="id" type="text" class="form-control" id="floatingInput" placeholder="Id"/>
-	      <span style="color :red; margin-left:10px; font: italic bold 1em Georgia, serif ;"><form:errors path="id"/></span>
+	      <div style="color:red; font-style: italic;"> <form:errors path="id"/> </div>
 	      <label for="floatingInput">ID</label>
 	    </div><br>
 	    
 	    <div class="form-floating">
 	      <form:input path="pw" type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
-	      <span style="color :red; margin-left:10px; font: italic bold 1em Georgia, serif ;"><form:errors path="pw"/></span>
+	      <div style="color:red; font-style: italic;"> <form:errors path="pw"/> </div>
 	      <label for="floatingPassword">Password</label>
 	    </div>
 		

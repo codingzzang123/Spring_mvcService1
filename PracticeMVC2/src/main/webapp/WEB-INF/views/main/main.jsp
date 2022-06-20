@@ -26,5 +26,6 @@
             </c:choose>
         </div>
 	</div>
+	<a href="<c:url value='/user/detail?num=3'/>">number=3</a>
 </body>
 </html>

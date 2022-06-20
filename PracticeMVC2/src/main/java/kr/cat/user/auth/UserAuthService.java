@@ -15,7 +15,7 @@ public class UserAuthService {
 	public UserAuthInfo authenticate(String id,String pw) {
 		MemberVO member = dao.selectById(id);
 		if(member == null) {
-			throw new IdPasswordNotMatchingException("존재하지 않는 아이디"); 
+			throw new MemberNotFoundException("존재하지 않는 아이디"); 
 		}
 		if(!member.matchPassword(pw)) {
 			throw new IdPasswordNotMatchingException("비밀번호가 일치 하지않음");

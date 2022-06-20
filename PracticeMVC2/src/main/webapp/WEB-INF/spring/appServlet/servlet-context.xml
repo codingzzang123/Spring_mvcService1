@@ -27,6 +27,14 @@
 		<mvc:jsp prefix="/WEB-INF/views/" suffix=".jsp"/>
 	</mvc:view-resolvers>
 	
+	<mvc:interceptors> <!-- 인증된 사용자만 들어갈수있는 url이 있다면 경로 지정 -->
+		<mvc:interceptor>
+			<mvc:mapping path="/user/changePassword/**"/>
+			<bean class="kr.cat.user.auth.AuthCheckInterceptor"/>
+		</mvc:interceptor>
+	</mvc:interceptors> 
+	
+	
 	<bean id="messageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource">
 			<property name="basenames">
